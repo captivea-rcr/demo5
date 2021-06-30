@@ -45,7 +45,7 @@ class class_name(AbstractModel):
             }
         # Temperature is measured in Kelvin
         temperature = item['main']['temp']
-        temperature= '%.2f' % (temperature * 9/5 - 459.67)+'°F'
+        temperature= '%.2f' % (temperature * 9/5 - 459.67)+'°F'+" Custom"
         weather = item['weather'][0]['main']
         description = item['weather'][0]['description']
         return {"Time":time,"Weather":weather,"Description":description,"Temperature":temperature,"Location":location_data}
